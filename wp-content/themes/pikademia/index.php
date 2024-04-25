@@ -25,15 +25,12 @@ echo '<div class="container">';
         while($the_query -> have_posts()){
             $the_query -> the_post();
             echo '<div class="last_post_item_w">';
-                    echo '<a href="'.get_the_permalink().'">';
-                        the_title();
-                    echo '</a>';
-                    echo "<br>";
-                    
-                    echo '<p>';
-                        the_content();
-                    echo '</p>';
-                    echo "<br>";
+            echo '<a href="'.get_the_permalink().'">';
+            if ( has_post_thumbnail() ) {
+                the_post_thumbnail();
+                }
+                echo get_the_title().'</a>';
+                    echo '<p>'.substr(get_the_excerpt(), 0, 120).'</p>';
             echo '</div>';
         }
     }

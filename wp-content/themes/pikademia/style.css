@@ -43,6 +43,12 @@ body {
     box-shadow: 3px 3px 3px #ccc;
     flex: 1 1 0;
     padding: 2rem;
+    align-self: stretch;
+}
+
+.last_post_item_w img {
+    width: 100%;
+    height: auto;
 }
 
 .last_post_item_w a {
